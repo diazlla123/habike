@@ -1,3 +1,4 @@
+
 # db/seeds.rb
 
 # Create 10 Users
