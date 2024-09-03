@@ -1,4 +1,7 @@
 class BikesController < ApplicationController
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @bikes = Bike.all
   end
@@ -12,8 +15,14 @@ class BikesController < ApplicationController
   end
 
   def create
+    @user = current_user
     @bike = Bike.new(bike_params)
-    @bike.save
+    @bike.user_id = @user.id
+    if @bike.save
+      redirect_to bikes_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
