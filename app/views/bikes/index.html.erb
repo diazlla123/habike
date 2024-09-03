@@ -1,14 +1,20 @@
 <h1>Welcome to HaBikes!</h1>
+<%= link_to "Sell your bike here", new_bike_path(@bike) %>
 <ul>
 <% @bikes.each do |bike| %>
   <li>
-  <%= image_tag "bike.jpg" %>
+  <% if bike.photo.attached? %>
+    <%= cl_image_tag bike.photo.key %>
+  <% else %>
+    <%= image_tag "bike.jpg" %>
+  <% end %>
   <%= bike.model %>
   <%= bike.year %>
   <%= bike.description %>
   <%= bike.kilometers %>
   <%= bike.price %>
   <%= bike.category %>
+  <%= link_to "More info", bike_path(bike) %>
   </li>
 <% end %>
 </ul>

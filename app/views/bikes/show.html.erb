@@ -13,6 +13,13 @@
     <p class="card-text"><small>Posted by User ID: <%= @bike.user.email %></small></p>
   </div>
 
+  <h1><%= @bike.model %>, <%= @bike.year %></h1>
+<% if @bike.photo.attached? %>
+    <%= cl_image_tag @bike.photo.key %>
+  <% else %>
+    <%= image_tag "bike.jpg" %>
+<% end %>
+  
   <div>
     <%= simple_form_for [@bike, @purchase] do |f| %>
       <%= f.hidden_field :bike_id, value: @bike.id %>
