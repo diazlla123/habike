@@ -1,0 +1,16 @@
+<div class="container d-flex mt-5 border border-dark">
+  <div class="row justify-content-center border border-dark">
+      <div>
+        <h1>Please enter the details of the bike you'd like to sell</h1>
+      </div>
+        <%= simple_form_for(@bike) do |f| %>
+          <%= f.input :model %>
+          <%= f.input :year %>
+          <%= f.input :description %>
+          <%= f.input :kilometers %>
+          <%= f.input :price %>
+          <%= f.input :category %>
+          <%= f.submit "Create Offer", class:"btn btn-primary" %>
+        <% end %>
+  </div>
+</div>

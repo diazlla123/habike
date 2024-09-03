@@ -1,0 +1,14 @@
+<h1>Welcome to HaBikes!</h1>
+<ul>
+<% @bikes.each do |bike| %>
+  <li>
+  <%= image_tag "bike.jpg" %>
+  <%= bike.model %>
+  <%= bike.year %>
+  <%= bike.description %>
+  <%= bike.kilometers %>
+  <%= bike.price %>
+  <%= bike.category %>
+  </li>
+<% end %>
+</ul>
