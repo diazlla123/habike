@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <div class="container d-flex mt-5 border border-dark">
   <div class="row justify-content-center border border-dark">
       <div>
@@ -10,6 +11,7 @@
           <%= f.input :kilometers %>
           <%= f.input :price %>
           <%= f.input :category %>
+          <%= f.input :photo, as: :file %>
           <%= f.submit "Create Offer", class:"btn btn-primary" %>
         <% end %>
   </div>
