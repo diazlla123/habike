@@ -1,0 +1,29 @@
+<h1>Detail motor bike</h1>
+<div class="card mb-3">
+  <div class="card-header">
+    <h5 class="card-title"><%= @bike.model %> - <%= @bike.year %></h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><strong>Category:</strong> <%= @bike.category %></p>
+    <p class="card-text"><strong>Description:</strong> <%= @bike.description %></p>
+    <p class="card-text"><strong>Kilometers:</strong> <%= @bike.kilometers %> km</p>
+    <p class="card-text"><strong>Price:</strong> $<%= @bike.price %></p>
+  </div>
+  <div class="card-footer text-muted">
+    <p class="card-text"><small>Posted by User ID: <%= @bike.user.email %></small></p>
+  </div>
+
+  <h1><%= @bike.model %>, <%= @bike.year %></h1>
+<% if @bike.photo.attached? %>
+    <%= cl_image_tag @bike.photo.key %>
+  <% else %>
+    <%= image_tag "bike.jpg" %>
+<% end %>
+  
+  <div>
+    <%= simple_form_for [@bike, @purchase] do |f| %>
+      <%= f.hidden_field :bike_id, value: @bike.id %>
+      <%= f.submit "Buy", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
