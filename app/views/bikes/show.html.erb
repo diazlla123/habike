@@ -1,4 +1,5 @@
 <h1>Detail motor bike</h1>
+<%= link_to "Back", bikes_path %>
 <div class="card mb-3">
   <div class="card-header">
     <h5 class="card-title"><%= @bike.model %> - <%= @bike.year %></h5>
@@ -19,7 +20,7 @@
   <% else %>
     <%= image_tag "bike.jpg" %>
 <% end %>
-  
+
   <div>
     <%= simple_form_for [@bike, @purchase] do |f| %>
       <%= f.hidden_field :bike_id, value: @bike.id %>
