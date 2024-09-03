@@ -3,7 +3,11 @@
 <ul>
 <% @bikes.each do |bike| %>
   <li>
-  <%= image_tag "bike.jpg" %>
+  <% if bike.photo.attached? %>
+    <%= cl_image_tag bike.photo.key %>
+  <% else %>
+    <%= image_tag "bike.jpg" %>
+  <% end %>
   <%= bike.model %>
   <%= bike.year %>
   <%= bike.description %>
