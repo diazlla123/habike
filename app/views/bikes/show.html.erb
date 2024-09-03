@@ -1,0 +1,11 @@
+<h1><%= @bike.model %>, <%= @bike.year %></h1>
+<% if @bike.photo.attached? %>
+    <%= cl_image_tag @bike.photo.key %>
+  <% else %>
+    <%= image_tag "bike.jpg" %>
+<% end %>
+<p><%= @bike.description %></p>
+<p><%= @bike.kilometers %> km</p>
+<p>$$ <%= @bike.price %> $$</p>
+<p>Category: <%= @bike.description %></p>
+<%= link_to "Back", bikes_path %>
