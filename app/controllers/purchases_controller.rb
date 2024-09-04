@@ -4,7 +4,6 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new(purchase_params)
     @purchase.seller_id = Bike.find(@purchase.bike_id).user_id
     @purchase.buyer_id = current_user.id
-sa
     if @purchase.save!
       Bike.find(@purchase.bike_id).status = "sold"
       Bike.find(@purchase.bike_id).update(status: 'sold')
