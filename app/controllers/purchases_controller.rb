@@ -2,11 +2,13 @@ class PurchasesController < ApplicationController
   before_action :authenticate_user!
   def create
     @purchase = Purchase.new(purchase_params)
-    @purchase.user = current_user
-
+    @purchase.seller_id = Bike.find(@purchase.bike_id).user_id
+    @purchase.buyer_id = current_user.id
+sa
     if @purchase.save!
       Bike.find(@purchase.bike_id).status = "sold"
-      Bike.find(@purchase.bike_id).update(Bike.find(params[:bike_id]).status)
+      Bike.find(@purchase.bike_id).update(status: 'sold')
+
       redirect_to bikes_path, notice: 'Purchase was successfully created.'
     else
       render 'bikes/show', alert: "You are not logged in"

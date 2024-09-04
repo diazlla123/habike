@@ -32,6 +32,6 @@ bikes.each_with_index do |bike_data, i|
     kilometers: bike_data[:kilometers],
     price: bike_data[:price],
     category: bike_data[:category],
-    user_id: users[i].id
+    seller_id: users[i].id
   )
 end
