@@ -1,0 +1,39 @@
+$border-color-primary: #800e13;
+$border-color-secondary: #640D14;
+
+.login-button,
+.singup-button {
+  border: 3px solid black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 5rem;
+  transition: 300ms ease all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1.0);
+  }
+}
+.login-button {
+  border-color: $border-color-primary;
+  &:hover {
+    background-color: $border-color-primary;
+    color: white;
+  }
+}
+.singup-button {
+  border-color: $border-color-secondary;
+  &:hover {
+    background-color: $border-color-secondary;
+    color: white;
+  }
+}
+.login-button-container {
+  text-align: center;
+  margin-right: 1rem;
+}
+.singup-button-container {
+  text-align: center;
+}

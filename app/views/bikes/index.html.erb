@@ -1,9 +1,13 @@
-<div class="title">
-  <h1>Welcome to HaBike</h1>
-  <h3>The place to find your next ride</h3>
-</div>
-<%= link_to "Sell your bike", new_bike_path(@bike) %>
-<div class="container">
+<section class="section__index">
+ <div class="section__div--index-slogan">
+  <div class="div__div--index-sloganTitle">
+    <h1>Welcome to HaBike</h1>
+    <h3>The place to find your next ride</h3>
+  </div>
+  <%= image_tag "bike.jpg", class: "div__img--index-sloganImg" %>
+ </div>
+
+  <div class="container">
   <% @bikes.each do |bike| %>
     <%= link_to bike_path(bike) do %>
     <div class="bike-card">
@@ -25,3 +29,5 @@
     <% end %>
   <% end %>
 </div>
+</section>
+<%= link_to "Sell your bike", new_bike_path(@bike) %>
