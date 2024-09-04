@@ -1,19 +1,47 @@
 <%= render "shared/navbar" %>
-<div class="container d-flex mt-5 border border-dark">
-  <div class="row justify-content-center border border-dark">
-      <div>
-        <h1>Please enter the details of the bike you'd like to sell</h1>
-      </div>
-        <%= simple_form_for(@bike) do |f| %>
-          <%= f.input :model %>
-          <%= f.input :year %>
-          <%= f.input :description %>
-          <%= f.input :kilometers %>
-          <%= f.input :price %>
-          <%= f.input :category %>
-          <%= f.input :photo, as: :file %>
-          <%= f.submit "Create Offer", class:"btn btn-primary" %>
-        <% end %>
-  </div>
+
+<div class="container text-center mt-3 mb-3">
+    <h1>Please enter the details of the bike you'd like to sell</h1>
 </div>
-<%= link_to "Back", bikes_path %>
+ <%= simple_form_for @bike do |f| %>
+  <div class="container" id="view-form">
+    <div class="row">
+      <div class="row">
+        <!-- Right Column -->
+        <div class="col-lg-6 col-md-12">
+          <%= f.input :model, label: "Bike Model", placeholder: "Include brand and model", input_html: { class: 'form-control' } %>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :year, label: "Year", input_html: { class: 'form-control' } %>
+            </div>
+            <div class="col-6">
+              <%= f.input :kilometers, label: "Kilometers", input_html: { class: 'form-control' } %>
+            </div>
+          </div>
+          <%= f.input :price, label: "Price", placeholder: "In dolars", input_html: { class: 'form-control' } %>
+          <%= f.input :category, label: "Category", placeholder: "select or create your own category", collection: ["Naked", "Street", "Hybrid", "Electric", "Other"], prompt: "Select or create your own category", input_html: { class: 'form-control' } %>
+
+          <div>
+            <input type="text" class="d-none">
+          </div>
+        </div>
+
+        <!-- Left Column -->
+        <div class="col-lg-6 col-md-12">
+          <%= f.input :description, label: "Description", input_html: { class: 'form-control', rows: 8 } %>
+          <%= f.input :photo, as: :file, label: "Photo", input_html: { class: 'form-control-file' } %>
+        </div>
+
+      </div>
+
+      <!-- Buttons -->
+      <div class="row">
+        <div class="d-flex justify-content-between mt-4">
+            <%= f.submit "Create Offer", class: "create-button" %>
+            <%= link_to "Cancel", bikes_path, class: "cancel-button" %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,66 @@
+
+$base-color: #250902;
+$secondary-color: #38040E; // donde combina
+$border-color-primary: #800E13; // botones
+$border-color-secondary: #640D14; // formularios
+$button-fill-color: #AD2831; // rellenar algun boton
+// letras blanco
+
+
+// Styling for the form container
+#view-form {
+  border: 2px solid $border-color-secondary; // Using secondary color for form border
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9; // Optional background color to make form stand out
+  border-radius: 20px;
+}
+
+
+// Buttons
+.create-button {
+  min-width: 50px;
+  border: 3px solid black;
+  text-align: center;
+  padding: 10px 20px; /* Agrega espacio dentro del botón */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  background-color: white; /* Fondo blanco para que contraste con el borde */
+  color: black; /* Texto negro */
+  cursor: pointer; /* Cambia el cursor cuando pasas sobre el botón */
+  transition: transform 300ms ease, background-color 300ms ease; /* Transiciones suaves para la transformación y el color */
+  border-radius: 8px;
+}
+
+/* Hover: Efecto cuando el ratón pasa sobre el botón */
+.create-button:hover {
+  transform: scale(1.1); /* Aumenta el tamaño del botón ligeramente */
+  background-color: $button-fill-color; /* Cambia el fondo al pasar el mouse */
+}
+
+/* Active: Efecto cuando se hace clic en el botón */
+.create-button:active {
+  transform: scale(1.0); /* Vuelve al tamaño normal al hacer clic */
+  background-color: gray; /* Cambia el color de fondo cuando el botón está activo */
+}
+
+
+.cancel-button {
+  min-width: 130px;
+  text-align: center;
+  border: 3px solid black;
+  background-color: #8b898a;
+  font-size: 16px;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.cancel-button:hover {
+  transform: scale(1.1);
+  background-color: $button-fill-color;
+}
+
+.cancel-button:active {
+  transform: scale(1.0);
+  background-color: gray;
+}
