@@ -1,0 +1,20 @@
+$border-color-secondary: #640D14;
+.button-singup {
+  border: 3px solid $border-color-secondary;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 5rem;
+  transition: 300ms ease all;
+
+  &:hover {
+    transform: scale(1.1);
+    border-color: $border-color-secondary;
+    background-color: $border-color-secondary;
+    color: white;
+  }
+  &:active {
+    transform: scale(1.0);
+  }
+}

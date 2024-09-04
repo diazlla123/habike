@@ -1,11 +1,12 @@
 @import "button";
 
-$secondary-color: #38040E;
+$button-fill-color: #AD2831;
 
 .navbar-habike {
   justify-content: space-around;
   background: white;
-  border-bottom: 1px solid $secondary-color;
+  border-color: 1px solid $button-fill-color;
+  box-shadow: 2px 2px 2px 1px #0000003b;
 }
 .navbar-habike .navbar-collapse {
   flex-grow: 0;
@@ -14,5 +15,6 @@ $secondary-color: #38040E;
 .navbar-habike .navbar-brand img {
 }
 .logo__img {
+  border-radius: 1rem;
   width: 50px;
 }

@@ -10,6 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/login";
+@import "pages/singup";
+@import "components/linksSingLogin";
 
 $base-color: #250902;
 $secondary-color: #38040E;
