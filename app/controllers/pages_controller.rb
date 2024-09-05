@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
-  def home
+
+  def show
+    @bikes = current_user.bikes
+    @purchases = current_user.purchases
   end
 end

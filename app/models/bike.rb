@@ -7,4 +7,5 @@ class Bike < ApplicationRecord
   validates :year, :kilometers, :price, numericality: true
   validates :year, comparison: { less_than_or_equal_to: 2024 }
   validates :kilometers, length: { maximum: 6 }
+  validates :status, presence: true, inclusion: { in: %w(available sold) }
 end

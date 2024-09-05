@@ -1,0 +1,143 @@
+=> 
+[[32m#<Bike:0x00007f2e00b49440[0m
+  id: [34m[1m1[0m,
+  model: [31m[1m"[0m[31mHarley-Davidson Street 750[0m[31m[1m"[0m,
+  year: [34m[1m2022[0m,
+  description: [31m[1m"[0m[31mA powerful cruiser with a classic look[0m[31m[1m"[0m,
+  kilometers: [34m[1m500[0m,
+  price: [35m[1m7500.0[0m,
+  category: [31m[1m"[0m[31mCruiser[0m[31m[1m"[0m,
+  user_id: [34m[1m1[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.108077000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.108077000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79c58[0m
+  id: [34m[1m2[0m,
+  model: [31m[1m"[0m[31mDucati Panigale V4[0m[31m[1m"[0m,
+  year: [34m[1m2023[0m,
+  description: [31m[1m"[0m[31mA high-performance sports bike[0m[31m[1m"[0m,
+  kilometers: [34m[1m300[0m,
+  price: [35m[1m25000.0[0m,
+  category: [31m[1m"[0m[31mSport[0m[31m[1m"[0m,
+  user_id: [34m[1m2[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.113825000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.113825000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79b18[0m
+  id: [34m[1m3[0m,
+  model: [31m[1m"[0m[31mHonda CB500X[0m[31m[1m"[0m,
+  year: [34m[1m2021[0m,
+  description: [31m[1m"[0m[31mA versatile adventure bike[0m[31m[1m"[0m,
+  kilometers: [34m[1m1200[0m,
+  price: [35m[1m7000.0[0m,
+  category: [31m[1m"[0m[31mAdventure[0m[31m[1m"[0m,
+  user_id: [34m[1m3[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.119771000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.119771000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b799d8[0m
+  id: [34m[1m4[0m,
+  model: [31m[1m"[0m[31mYamaha MT-07[0m[31m[1m"[0m,
+  year: [34m[1m2020[0m,
+  description: [31m[1m"[0m[31mA lightweight naked bike[0m[31m[1m"[0m,
+  kilometers: [34m[1m1500[0m,
+  price: [35m[1m6500.0[0m,
+  category: [31m[1m"[0m[31mNaked[0m[31m[1m"[0m,
+  user_id: [34m[1m4[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.125145000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.125145000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79898[0m
+  id: [34m[1m5[0m,
+  model: [31m[1m"[0m[31mKawasaki Ninja 400[0m[31m[1m"[0m,
+  year: [34m[1m2022[0m,
+  description: [31m[1m"[0m[31mA beginner-friendly sports bike[0m[31m[1m"[0m,
+  kilometers: [34m[1m800[0m,
+  price: [35m[1m5000.0[0m,
+  category: [31m[1m"[0m[31mSport[0m[31m[1m"[0m,
+  user_id: [34m[1m5[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.129296000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.129296000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79758[0m
+  id: [34m[1m6[0m,
+  model: [31m[1m"[0m[31mBMW R1250GS[0m[31m[1m"[0m,
+  year: [34m[1m2023[0m,
+  description: [31m[1m"[0m[31mA premium adventure touring bike[0m[31m[1m"[0m,
+  kilometers: [34m[1m200[0m,
+  price: [35m[1m21000.0[0m,
+  category: [31m[1m"[0m[31mAdventure[0m[31m[1m"[0m,
+  user_id: [34m[1m6[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.134300000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.134300000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79618[0m
+  id: [34m[1m7[0m,
+  model: [31m[1m"[0m[31mTriumph Bonneville T120[0m[31m[1m"[0m,
+  year: [34m[1m2021[0m,
+  description:
+   [31m[1m"[0m[31mA modern classic bike with retro styling[0m[31m[1m"[0m,
+  kilometers: [34m[1m400[0m,
+  price: [35m[1m12000.0[0m,
+  category: [31m[1m"[0m[31mClassic[0m[31m[1m"[0m,
+  user_id: [34m[1m7[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.142344000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.142344000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b794d8[0m
+  id: [34m[1m8[0m,
+  model: [31m[1m"[0m[31mSuzuki GSX-R1000[0m[31m[1m"[0m,
+  year: [34m[1m2020[0m,
+  description: [31m[1m"[0m[31mA high-performance superbike[0m[31m[1m"[0m,
+  kilometers: [34m[1m2200[0m,
+  price: [35m[1m15000.0[0m,
+  category: [31m[1m"[0m[31mSport[0m[31m[1m"[0m,
+  user_id: [34m[1m8[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.162299000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.162299000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79398[0m
+  id: [34m[1m9[0m,
+  model: [31m[1m"[0m[31mIndian Scout Bobber[0m[31m[1m"[0m,
+  year: [34m[1m2023[0m,
+  description:
+   [31m[1m"[0m[31mA stylish cruiser with a low-slung profile[0m[31m[1m"[0m,
+  kilometers: [34m[1m100[0m,
+  price: [35m[1m13000.0[0m,
+  category: [31m[1m"[0m[31mCruiser[0m[31m[1m"[0m,
+  user_id: [34m[1m9[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.166687000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.166687000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m,
+ [32m#<Bike:0x00007f2e00b79258[0m
+  id: [34m[1m10[0m,
+  model: [31m[1m"[0m[31mKTM 390 Duke[0m[31m[1m"[0m,
+  year: [34m[1m2021[0m,
+  description: [31m[1m"[0m[31mA fun and nimble street bike[0m[31m[1m"[0m,
+  kilometers: [34m[1m900[0m,
+  price: [35m[1m5500.0[0m,
+  category: [31m[1m"[0m[31mNaked[0m[31m[1m"[0m,
+  user_id: [34m[1m10[0m,
+  created_at:
+   Tue, 03 Sep 2024 17:45:19.174038000 UTC +00:00,
+  updated_at:
+   Tue, 03 Sep 2024 17:45:19.174038000 UTC +00:00,
+  status: [36m[1mnil[0m[32m>[0m]
