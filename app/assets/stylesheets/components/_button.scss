@@ -1,5 +1,6 @@
 $border-color-primary: #800e13;
 $border-color-secondary: #640D14;
+$button-fill-color: #AD2831;
 
 .login-button,
 .singup-button {
@@ -37,4 +38,64 @@ $border-color-secondary: #640D14;
 }
 .singup-button-container {
   text-align: center;
+}
+.add-your-bike{
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: solid 3px $button-fill-color;
+  text-decoration: none;
+  color: white;
+  background-color: $button-fill-color;
+  transition: 300ms ease all;
+  margin-right: 1rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1.0);
+  }
+}
+.btn-show-bike-buy {
+  text-align: center;
+  display: inline-block;
+  width: 5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: solid 3px $button-fill-color;
+  text-decoration: none;
+  color: white;
+  background-color: $button-fill-color;
+  transition: 300ms ease all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1.0);
+  }
+}
+
+$secondary-color: #38040E;
+
+.backLink-show {
+  text-align: center;
+  display: inline-block;
+  width: 5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: solid 3px $secondary-color;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  transition: 300ms ease all;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: white;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1.0);
+  }
 }

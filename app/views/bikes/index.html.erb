@@ -7,9 +7,11 @@
   <%= image_tag "logo.webp", class: "div__img--index-sloganImg" %>
  </div>
 
+  <%= link_to "Sell your bike", new_bike_path(@bike), :class => "add-your-bike" %>
+
   <div class="container section__div--index-cards">
   <% @bikes.each do |bike| %>
-    <%= link_to bike_path(bike) do %>
+    <%= link_to bike_path(bike), :class => "bike-a-details" do %>
       <div class="bike-card">
         <% if bike.photo.attached? %>
           <%= cl_image_tag bike.photo.key, class: "bike-image" %>
@@ -30,4 +32,3 @@
   <% end %>
   </div>
 </section>
-<%= link_to "Sell your bike", new_bike_path(@bike) %>

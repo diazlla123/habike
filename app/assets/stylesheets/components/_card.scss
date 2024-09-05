@@ -16,20 +16,33 @@ body {
   gap: 20px;
 }
 
+$button-fill-color: #AD2831;
+$secondary-color: #38040E;
+
+
 .bike-card {
   width: 300px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
+  border-radius: 1rem;
+  background-color: white;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-}
+  box-shadow: 0 0px 10px $button-fill-color;
+  margin: 1rem;
+  transition: all 200ms ease;
 
-.bike-card:hover{
-  width: 320px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 90ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bike-a-details{
+  text-decoration: none;
+}
+.bike-card:hover {
+  transform: scale(1.05);
+}
+.bike-card:active {
+  transform: scale(1);
 }
 
 .bike-image {
@@ -40,6 +53,10 @@ body {
 
 .bike-details {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bike-details h3 {
@@ -58,6 +75,10 @@ body {
   margin-top: 16px;
   border-top: 1px solid #ddd;
   padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .bike-price .price {

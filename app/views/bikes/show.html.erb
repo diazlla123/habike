@@ -1,30 +1,42 @@
-<h1>Detail motor bike</h1>
-<%= link_to "Back", bikes_path %>
-<div class="card mb-3">
-  <div class="card-header">
-    <h5 class="card-title"><%= @bike.model %> - <%= @bike.year %></h5>
+<section class="section__show">
+  <div class="section__div-show">
+    <div class="div__div-show-container-card">
+      <h1 class="h1-show">
+        <%= @bike.model %>, <%= @bike.year %>
+      </h1>
+      <div class="details-show-bike">
+        <p class="details-text">
+          <strong>Category:</strong> <%= @bike.category %>
+        </p>
+        <p class="details-text">
+          <strong>Description:</strong> <%= @bike.description %>
+        </p>
+        <p class="details-text">
+          <strong>Kilometers:</strong> <%= @bike.kilometers %> km
+        </p>
+        <p class="details-text">
+          <strong>Price:</strong> $<%= @bike.price %>
+        </p>
+      </div>
+      <div class="details-text-user-post">
+        <p class="details-text-user-post-p"><small>Posted by User ID: <%= @bike.user.email %></small></p>
+      </div>
+    </div>
   </div>
-  <div class="card-body">
-    <p class="card-text"><strong>Category:</strong> <%= @bike.category %></p>
-    <p class="card-text"><strong>Description:</strong> <%= @bike.description %></p>
-    <p class="card-text"><strong>Kilometers:</strong> <%= @bike.kilometers %> km</p>
-    <p class="card-text"><strong>Price:</strong> $<%= @bike.price %></p>
-  </div>
-  <div class="card-footer text-muted">
-    <p class="card-text"><small>Posted by User ID: <%= @bike.user.email %></small></p>
-  </div>
-
-  <h1><%= @bike.model %>, <%= @bike.year %></h1>
-<% if @bike.photo.attached? %>
-    <%= cl_image_tag @bike.photo.key %>
-  <% else %>
-    <%= image_tag "bike.jpg" %>
-<% end %>
-
+  <div class="section__div-show-img">
+    <% if @bike.photo.attached? %>
+      <%= cl_image_tag @bike.photo.key, :class => "photo-show-bike" %>
+    <% else %>
+      <%= image_tag "bike.jpg", :class => "photo-show-bike" %>
+    <% end %>
+  </div>  
+</section>
+<div class="links-show-bike">
+  <%= link_to "Back", bikes_path, :class => "backLink-show" %>
   <div>
     <%= simple_form_for [@bike, @purchase] do |f| %>
       <%= f.hidden_field :bike_id, value: @bike.id %>
-      <%= f.submit "Buy", class: "btn btn-primary" %>
+      <%= f.submit "Buy", class: "btn-show-bike-buy" %>
     <% end %>
   </div>
 </div>

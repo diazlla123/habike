@@ -1,0 +1,61 @@
+.section__show {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  gap: 1rem;
+  padding: 0rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.section__div-show {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-right: 1px solid #ddd;
+  padding-right: 3rem;
+}
+
+$button-fill-color: #AD2831;
+
+.div__div-show-container-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.h1-show {
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 10px $button-fill-color;
+}
+.details-show-bike {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.details-text {
+  font-size: 1.3em;
+}
+.section__div-show-img {
+}
+.photo-show-bike {
+  margin-left: 5rem;
+  width: 45rem;
+}
+.details-text-user-post{
+  margin-top: 2rem;
+  color: #777;
+}
+.links-show-bike {
+  display: flex;
+  justify-content: space-around;
+}
