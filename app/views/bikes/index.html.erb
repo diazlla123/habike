@@ -15,7 +15,7 @@
         <%= link_to bike_path(bike), class: "bike-a-details" do %>
           <div class="bike-card">
             <% if bike.photo.attached? %>
-              <%= cl_image_tag bike.photo.key, class: "bike-image" %>
+              <%# <%= cl_image_tag bike.photo.key, class: "bike-image" %>
             <% else %>
               <%= image_tag "bike.jpg", class: "bike-image" %>
             <% end %>

@@ -25,17 +25,18 @@
   </div>
   <div class="section__div-show-img">
     <% if @bike.photo.attached? %>
-      <%= cl_image_tag @bike.photo.key, :class => "photo-show-bike" %>
+      <%# <%= cl_image_tag @bike.photo.key, :class => "photo-show-bike" %>
     <% else %>
       <%= image_tag "bike.jpg", :class => "photo-show-bike" %>
     <% end %>
-  </div>  
+  </div>
 </section>
 <div class="links-show-bike">
   <%= link_to "Back", bikes_path, :class => "backLink-show" %>
   <div>
     <%= simple_form_for [@bike, @purchase] do |f| %>
       <%= f.hidden_field :seller_id, value: @bike.user_id %>
+      <%= f.hidden_field :bike_id, value: @bike.id %>
       <%= f.submit "Buy", class: "btn-show-bike-buy" %>
     <% end %>
   </div>

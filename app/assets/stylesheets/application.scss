@@ -22,7 +22,5 @@ $border-color-primary: #800E13;
 $border-color-secondary: #640D14;
 $button-fill-color: #AD2831;
 
-@import "components/new_form"
-
-
-
+@import "components/new_form";
+@import "components/purchase";
