@@ -9,29 +9,32 @@ $button-fill-color: #AD2831;
   gap: 2rem;
   justify-content: center;
   align-items: flex-end;
-  padding: 1rem;
 }
 .section__div--index-slogan {
   width: inherit;
   height: 60vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 10rem;
   gap: 3rem;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -7rem;
 
   .div__img--index-sloganImg {
     width: 20rem;
   }
 
-  h1 {
-    font-size: 4em;
-    text-shadow: 1px 1px 10px $button-fill-color;
-  }
   h2 {
-    font-size: 2em;
+    font-size: 4em;
+    text-align: end;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px $button-fill-color;
   }
 }
-
 .section__div--index-cards {
   height: auto !important; 
 }
