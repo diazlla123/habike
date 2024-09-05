@@ -56,7 +56,8 @@ $button-fill-color: #AD2831;
     transform: scale(1.0);
   }
 }
-.btn-show-bike-buy {
+.btn-show-bike-buy,
+.btn-show-bike-buy-1 {
   text-align: center;
   display: inline-block;
   width: 5rem;
@@ -74,6 +75,10 @@ $button-fill-color: #AD2831;
   &:active {
     transform: scale(1.0);
   }
+}
+.btn-show-bike-buy-1 {
+  display: inline;
+  width: auto;
 }
 
 $secondary-color: #38040E;
