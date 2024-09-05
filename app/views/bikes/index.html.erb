@@ -1,7 +1,11 @@
 <div class="title">
   <h1>Welcome to HaBike</h1>
   <h3>The place to find your next ride</h3>
-  <%= link_to "Profile", page_path(current_user.id) %>
+  <% if user_signed_in? %>
+    <%= link_to "Profile", page_path(current_user.id) %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path %>
+  <% end %>
 </div>
 <%= link_to "Sell your bike", new_bike_path(@bike) %>
 <div class="container">
