@@ -6,12 +6,16 @@ class PurchasesController < ApplicationController
     @bike = Bike.find(@purchase.bike_id)
     @purchase.buyer_id = current_user.id
 
-    if @purchase.save!
+    if @purchase.save
       @bike.update(status: 'sold')
-      redirect_to bikes_path, notice: 'Purchase was successfully created.'
+      redirect_to bike_purchase_path(@bike, @purchase.buyer_id), notice: 'Purchase was successfully created.'
     else
       render 'bikes/show', alert: "You are not logged in"
     end
+  end
+
+  def show
+    @bike = Bike.find(params[:id])
   end
 
   private
