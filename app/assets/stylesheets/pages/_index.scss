@@ -8,12 +8,11 @@ $button-fill-color: #AD2831;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   padding: 1rem;
 }
 .section__div--index-slogan {
   width: inherit;
-  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,5 +32,25 @@ $button-fill-color: #AD2831;
 }
 
 .section__div--index-cards {
-  height: auto !important; 
+  height: auto !important;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form-control {
+  border: solid black;
+  border-radius: 3px;
+  margin-left: 20px;
+  width: 400px;
+  margin-right: 20px;
+}
+
+.add-your-bike {
+  padding: 5px 10px;
+  margin-left: 10px;
 }
