@@ -41,12 +41,6 @@
             <p class="price-amount">$<%= bike.price %></p>
           </div>
         </div>
-        <div>
-          <%= simple_form_for [bike] do |f| %>
-            <%= f.hidden_field :buyer_id, value: "" %>
-            <%= f.submit "Delete", class: "btn btn-danger" %>
-          <% end %>
-        </div>
       </div>
     <% end %>
   <% end %>
