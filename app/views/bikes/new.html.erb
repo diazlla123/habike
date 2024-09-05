@@ -1,10 +1,12 @@
 <div class="new-container">
-  <div class="container text-center p-4">
+ <!--  <div class="container text-center p-4">
     <h1>Please enter the details of the bike you'd like to sell</h1>
-  </div>
+  </div> -->
 
+<div class="container-img">
+  <h1 class="title-img-new">Please enter the details of the bike you'd like to sell</h1>
   <%= simple_form_for @bike do |f| %>
-    <div class="container" id="view-form">
+    <div class="container" id="view-form" >
       <div class="row">
         <div class="row">
           <!-- Right Column -->
@@ -37,13 +39,14 @@
       <!-- Buttons -->
       <div class="row">
         <div class="d-flex justify-content-between mt-4">
-            <%= f.submit "Create Offer", class: "create-button" %>
             <%= link_to "Cancel", bikes_path, class: "cancel-button" %>
+            <%= f.submit "Create Offer", class: "create-button" %>
         </div>
       </div>
 
       </div>
     </div>
   <% end %>
+</div>
 
 </div>

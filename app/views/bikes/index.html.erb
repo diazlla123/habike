@@ -13,7 +13,7 @@
     <%= form_with url: bikes_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "form-input",
             placeholder: "Type a keyword"
         %>
       <%= submit_tag "Search", name: "", class: "add-your-bike" %>
