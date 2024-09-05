@@ -1,3 +1,4 @@
+
 <section class="section__index">
  <div class="section__div--index-slogan">
   <div class="div__div--index-sloganTitle">
@@ -12,6 +13,22 @@
   <div class="container section__div--index-cards">
   <% @bikes.each do |bike| %>
     <%= link_to bike_path(bike), :class => "bike-a-details" do %>
+
+<div class="title">
+  <h1>Welcome to HaBike</h1>
+  <h3>The place to find your next ride</h3>
+  <% if user_signed_in? %>
+    <%= link_to "Profile", page_path(current_user.id) %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path %>
+  <% end %>
+</div>
+<%= link_to "Sell your bike", new_bike_path(@bike) %>
+<div class="container">
+  <% @bikes.each do |bike| %>
+    <% if bike.status == "available" %>
+      <%= link_to bike_path(bike) do %>
+
       <div class="bike-card">
         <% if bike.photo.attached? %>
           <%= cl_image_tag bike.photo.key, class: "bike-image" %>
@@ -28,6 +45,9 @@
           </div>
         </div>
       </div>
+
+    <% end %>
+
     <% end %>
   <% end %>
   </div>

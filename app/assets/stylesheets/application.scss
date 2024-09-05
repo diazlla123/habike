@@ -10,6 +10,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
 @import "pages/login";
 @import "pages/singup";
 @import "components/linksSingLogin";
@@ -20,3 +21,8 @@ $secondary-color: #38040E;
 $border-color-primary: #800E13;
 $border-color-secondary: #640D14;
 $button-fill-color: #AD2831;
+
+@import "components/new_form"
+
+
+

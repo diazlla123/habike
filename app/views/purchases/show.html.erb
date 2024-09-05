@@ -1,0 +1,21 @@
+<h1>VAMOSSS</h1>
+<h3>Congratulations on your new Bike!</h3>
+
+<%= link_to "Profile", page_path(current_user.id) %>
+<%= link_to "Back", bikes_path %>
+
+<div class="bike-card" style="border: 5px solid green;">
+  <% if @bike.photo.attached? %>
+    <%= cl_image_tag bike.photo.key, class: "bike-image" %>
+  <% else %>
+    <%= image_tag "bike.jpg", class: "bike-image" %>
+  <% end %>
+  <div class="bike-details">
+    <h3><%= @bike.model %></h3>
+    <p><%= @bike.year %> &middot; <%= @bike.kilometers %> km &middot; <%= @bike.category %></p>
+    <div class="bike-price">
+      <p class="price">Precio contado</p>
+      <p class="price-amount">$<%= @bike.price %></p>
+    </div>
+  </div>
+</div>
