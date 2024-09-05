@@ -14,7 +14,11 @@
       <% if bike.status == "available" %>
         <%= link_to bike_path(bike), class: "bike-a-details" do %>
           <div class="bike-card">
-            <%= cl_image_tag bike.photo.key, class: "bike-image" %>
+            <% if bike.photo.attached? %>
+              <%= cl_image_tag bike.photo.key, class: "bike-image" %>
+            <% else %>
+              <%= image_tag "bike.jpg", class: "bike-image" %>
+            <% end %>
             <div class="bike-details">
               <h3><%= bike.model %></h3>
               <p><%= bike.year %> &middot; <%= bike.kilometers %> km &middot; <%= bike.category %></p>

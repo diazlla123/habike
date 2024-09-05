@@ -21,7 +21,7 @@ $button-fill-color: #AD2831; // rellenar algun boton
   color: $base-color;
   padding-bottom: 15px;
   font-weight: bold;
-  border-bottom: 3px solid $base-color;
+  border-bottom: 1px solid #ddd;
   text-shadow: 1px 1px 10px $button-fill-color;
 }
 
@@ -98,6 +98,9 @@ $button-fill-color: #AD2831; // rellenar algun boton
   margin-right: 1rem;
 }
 
+.form-control-photo {
+  margin-top: 0.9rem;
+}
 
 
 
