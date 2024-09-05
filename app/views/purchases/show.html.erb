@@ -1,21 +1,49 @@
-<h1>VAMOSSS</h1>
-<h3>Congratulations on your new Bike!</h3>
 
-<%= link_to "Profile", page_path(current_user.id) %>
-<%= link_to "Back", bikes_path %>
 
-<div class="bike-card" style="border: 5px solid green;">
-  <% if @bike.photo.attached? %>
-    <%= cl_image_tag bike.photo.key, class: "bike-image" %>
-  <% else %>
-    <%= image_tag "bike.jpg", class: "bike-image" %>
-  <% end %>
-  <div class="bike-details">
-    <h3><%= @bike.model %></h3>
-    <p><%= @bike.year %> &middot; <%= @bike.kilometers %> km &middot; <%= @bike.category %></p>
-    <div class="bike-price">
-      <p class="price">Precio contado</p>
-      <p class="price-amount">$<%= @bike.price %></p>
+<!-- Buying body -->
+
+<div class="container mt-3">
+  <div class="row">
+    <!-- Box one-->
+    <div class="row full-height">
+      <!-- Banner -->
+
+      <div class="container p-3 mb-2 mt- border-bottom border-dark">
+        <div class="col justify-content-end">
+          <%= link_to "Back", bikes_path, class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+
+      <!-- Buy details-->
+
+      <div class="row w-100">
+
+        <!-- Hero -->
+        <div class="col-md-12 col-lg-6 text-center d-flex align-items-center justify-content-center">
+          <div class="row mb-4">
+            <h1 id="h1-sell">Let's go!</h1>
+            <h3>Congratulations on your new Bike!</h3>
+          </div>
+        </div>
+
+
+
+        <!-- Retrive a card of my by-->
+        <div class="col-md-12 col-lg-6">
+          <%= render "purchase_card", purchase: @purchase, bike: @bike, seller: @seller, buyer: @buyer %>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- My Offers -->
+
+    <div class="col-12 mt-4">
+        <div class="row border-bottom border-dark mb-4">
+          <h3>See Offers</h3>
+        </div>
+        <%= render "offers" %>
     </div>
   </div>
 </div>

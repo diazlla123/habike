@@ -1,0 +1,41 @@
+
+
+<div class="row justify-content-center">
+    <div class="bike-purchase-card">
+      <div class="row mt-3 mb-t w-100">
+        <h3  class="col-6">Purchase date:</h3>
+        <p  class="col-6"><%= purchase.created_at.strftime("%d/%m/%Y") %></p>
+      </div>
+
+      <% if bike.photo.attached? %>
+        <%# <%= cl_image_tag bike.photo.key, class: "bike-image" %>
+      <% else %>
+        <%= image_tag "bike.jpg", class: "bike-image" %>
+      <% end %>
+
+      <div class="bike-purchase-details">
+        <h3><%= bike.model %></h3>
+        <p><%= bike.year %> &middot; <%= bike.kilometers %> km &middot; <%= bike.category %></p>
+        <div class="bike-price-purchase">
+          <p class="price">Precio contado</p>
+          <p class="price-amount">$<%= bike.price %></p>
+
+        </div>
+        <div class="bike-price-purchase">
+          <div class="container">
+            <div class="col">
+              <div class="row">
+                <p class="price col-4">Seller email</p>
+                <p  class="col-8">$<%= seller.email %></p>
+              </div>
+          <div class="row">
+            <p class="price col-4">Buyer email</p>
+                <p  class="col-8">$<%= buyer.email %></p>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
