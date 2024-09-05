@@ -10,7 +10,7 @@ $button-fill-color: #AD2831; // rellenar algun boton
 
 .new-container {
 
-  background-color: #c7c7c7c5;
+  background-color: white;
   padding: 30px 0px;
   opacity: 0.9;
 
@@ -19,7 +19,10 @@ $button-fill-color: #AD2831; // rellenar algun boton
 .new-container h1{
   font-size: 2.5rem;
   color: $base-color;
+  padding-bottom: 15px;
   font-weight: bold;
+  border-bottom: 3px solid $base-color;
+  text-shadow: 1px 1px 10px $button-fill-color;
 }
 
 
@@ -35,18 +38,17 @@ $button-fill-color: #AD2831; // rellenar algun boton
   font-weight: 600;
 }
 
-#view-form input {
-  box-shadow: 5px 5px 5px $secondary-color;
+#view-form input:focus {
+  border: $border-color-secondary;
 }
 
-#view-form select {
-  box-shadow: 5px 5px 5px $secondary-color;
+#view-form select:focus {
+  border: $border-color-secondary;
 }
 
 
-#view-form textarea {
-  box-shadow: 5px 5px 5px $secondary-color;
-  border-radius: 8px;
+#view-form textarea:focus {
+  border: $border-color-secondary;
 }
 
 // Buttons
