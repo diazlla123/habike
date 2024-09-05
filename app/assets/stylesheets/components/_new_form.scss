@@ -22,6 +22,7 @@ $button-fill-color: #AD2831; // rellenar algun boton
   padding-bottom: 15px;
   font-weight: bold;
   border-bottom: 3px solid $base-color;
+  text-shadow: 1px 1px 10px $button-fill-color;
 }
 
 
