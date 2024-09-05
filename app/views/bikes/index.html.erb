@@ -1,3 +1,19 @@
+
+<section class="section__index">
+ <div class="section__div--index-slogan">
+  <div class="div__div--index-sloganTitle">
+    <h1>Welcome to HaBike</h1>
+    <h2>The place to find your next ride</h2>
+  </div>
+  <%= image_tag "logo.webp", class: "div__img--index-sloganImg" %>
+ </div>
+
+  <%= link_to "Sell your bike", new_bike_path(@bike), :class => "add-your-bike" %>
+
+  <div class="container section__div--index-cards">
+  <% @bikes.each do |bike| %>
+    <%= link_to bike_path(bike), :class => "bike-a-details" do %>
+
 <div class="title">
   <h1>Welcome to HaBike</h1>
   <h3>The place to find your next ride</h3>
@@ -12,12 +28,14 @@
   <% @bikes.each do |bike| %>
     <% if bike.status == "available" %>
       <%= link_to bike_path(bike) do %>
+
       <div class="bike-card">
         <% if bike.photo.attached? %>
           <%= cl_image_tag bike.photo.key, class: "bike-image" %>
         <% else %>
           <%= image_tag "bike.jpg", class: "bike-image" %>
         <% end %>
+
         <div class="bike-details">
           <h3><%= bike.model %></h3>
           <p><%= bike.year %> &middot; <%= bike.kilometers %> km &middot; <%= bike.category %></p>
@@ -27,7 +45,10 @@
           </div>
         </div>
       </div>
+
     <% end %>
+
     <% end %>
   <% end %>
-</div>
+  </div>
+</section>

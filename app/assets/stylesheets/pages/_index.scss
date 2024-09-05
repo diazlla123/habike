@@ -1,2 +1,37 @@
 // Import page-specific CSS files here.
-@import "home";
+$button-fill-color: #AD2831;
+.section__index {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1rem;
+}
+.section__div--index-slogan {
+  width: inherit;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  .div__img--index-sloganImg {
+    width: 20rem;
+  }
+
+  h1 {
+    font-size: 4em;
+    text-shadow: 1px 1px 10px $button-fill-color;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+.section__div--index-cards {
+  height: auto !important; 
+}
