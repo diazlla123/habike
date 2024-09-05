@@ -1,15 +1,9 @@
-<div class="new-container">
- <!--  <div class="container text-center p-4">
-    <h1>Please enter the details of the bike you'd like to sell</h1>
-  </div> -->
-
 <div class="container-img">
   <h1 class="title-img-new">Please enter the details of the bike you'd like to sell</h1>
   <%= simple_form_for @bike do |f| %>
     <div class="container" id="view-form" >
       <div class="row">
         <div class="row">
-          <!-- Right Column -->
           <div class="col-lg-6 col-md-12">
             <%= f.input :model, label: "Bike Model", placeholder: "Include brand and model", input_html: { class: 'form-control' } %>
             <div class="row">
@@ -27,16 +21,12 @@
               <input type="text" class="d-none">
             </div>
           </div>
-
-          <!-- Left Column -->
           <div class="col-lg-6 col-md-12 form-control-photo">
             <%= f.input :description, label: "Description", input_html: { class: 'form-control', rows: 8 } %>
             <%= f.input :photo, as: :file, label: "Photo", input_html: { class: 'form-control-file' } %>
           </div>
 
         </div>
-
-      <!-- Buttons -->
       <div class="row">
         <div class="d-flex justify-content-between mt-4">
             <%= link_to "Cancel", bikes_path, class: "backLink-show" %>

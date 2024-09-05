@@ -4,7 +4,6 @@ $border-color-primary: #800E13;
 $border-color-secondary: #640D14;
 $button-fill-color: #AD2831;
 
-//Backgorund
 .title-img-new {
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -16,12 +15,28 @@ $button-fill-color: #AD2831;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 90.9vh;
   flex-direction: column;
   background-image: url(asset-path('moto_taller.jpeg'));
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-img {
+  flex: 1;
 }
 
 .simple_form {
@@ -34,12 +49,10 @@ $button-fill-color: #AD2831;
   width: 80%;
 }
 
-// Poner imagen
 .new-container {
   opacity: 0.9;
 }
 
-// Styling for the form container
 #view-form {
   width: 100%;
   padding: 20px;
@@ -57,7 +70,6 @@ $button-fill-color: #AD2831;
   border: 2px solid $border-color-secondary;
 }
 
-// Buttons
 .create-button {
   border: 3px solid $border-color-primary;
   background-color: $border-color-primary;
@@ -107,7 +119,6 @@ $button-fill-color: #AD2831;
   margin-top: 0.9rem;
 }
 
-// Moviles configurations
 @media (max-width: 768px) {
   .new-container h1 {
     font-size: 1.5rem;
