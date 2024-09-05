@@ -8,22 +8,37 @@ $button-fill-color: #AD2831; // rellenar algun boton
 
 //Backgorund
 
-.new-container {
-
-  background-color: white;
-  padding: 30px 0px;
-  opacity: 0.9;
-
-}
-
-.new-container h1{
-  font-size: 2.5rem;
-  color: $base-color;
-  padding-bottom: 15px;
+.title-img-new{
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
   font-weight: bold;
-  border-bottom: 1px solid #ddd;
-  text-shadow: 1px 1px 10px $button-fill-color;
 }
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+  background-image: image-url('moto_taller.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.simple_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  width: 80%;
+}
+// Poner imagen
+.new-container {
+  opacity: 0.9;
 
 
 // Styling for the form container
@@ -54,6 +69,7 @@ $button-fill-color: #AD2831; // rellenar algun boton
 // Buttons
 .create-button {
   border: 3px solid $border-color-primary;
+  background-color: $border-color-primary;;
   box-shadow: none !important;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -101,9 +117,6 @@ $button-fill-color: #AD2831; // rellenar algun boton
 .form-control-photo {
   margin-top: 0.9rem;
 }
-
-
-
 
 // Moviles configurations
 

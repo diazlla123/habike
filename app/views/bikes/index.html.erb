@@ -7,9 +7,27 @@
     <%= image_tag "logo.webp", class: "div__img--index-sloganImg" %>
   </div>
 
+<!-- PLACEHOLDER SEARCH BAR-->
+<div class="search-bar">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: bikes_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-input",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "add-your-bike" %>
+    <% end %>
+  </div>
   <%= link_to "Sell your bike", new_bike_path(@bike), class: "add-your-bike" %>
+</div>
+<!-- PLACEHOLDER SEARCH BAR-->
+
 
   <div class="container section__div--index-cards">
+  <% if @bikes.empty? %>
+    <h3>"There are no bikes that fit this description"</h3>
+  <% else %>
     <% @bikes.each do |bike| %>
       <% if bike.status == "available" %>
         <%= link_to bike_path(bike), class: "bike-a-details" do %>
@@ -31,5 +49,6 @@
         <% end %>
       <% end %>
     <% end %>
+  <% end %>
   </div>
 </section>
