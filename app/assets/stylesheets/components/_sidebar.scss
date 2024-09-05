@@ -1,0 +1,30 @@
+.sidebar  {
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  background-color: #ebe4e4;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.sidebar button {
+  border-radius: 5px;
+  padding: 0.1rem;
+  border: solid 3px $button-fill-color;
+  text-decoration: none;
+  color: $button-fill-color;
+  background-color: white;
+  transition: 300ms ease all;
+  margin-right: 1rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1.0);
+    color: white;
+    background-color:$button-fill-color;
+  }
+}
