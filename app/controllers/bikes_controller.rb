@@ -26,8 +26,18 @@ class BikesController < ApplicationController
     end
   end
 
+  def update
+    @bike = Bike.find(params[:id])
+    @bike.update(bike_sold_params)
+    redirect_to bikes_path
+  end
+
   private
   def bike_params
     params.require(:bike).permit(:model, :year, :description, :kilometers, :price, :category, :photo)
+  end
+
+  def bike_sold_params
+    params.require(:bike).permit(:status)
   end
 end
