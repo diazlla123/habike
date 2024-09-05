@@ -1,0 +1,84 @@
+.bike-purchase-card {
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 0px 10px $button-fill-color;
+  margin: 1rem;
+  transition: all 200ms ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bike-purchase-card h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+
+.bike-purchase-card p {
+  font-size: 14px;
+  color: #777;
+  margin: 4px 0;
+}
+
+.bike-purchase-details {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bike-purchase-details h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.bike-purchase-details p {
+  font-size: 14px;
+  color: #777;
+  margin: 4px 0;
+}
+
+
+.bike-price-purchase {
+  margin-top: 16px;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bike-price-purchase .price {
+  font-size: 14px;
+  color: #777;
+}
+
+.bike-price-purchase .price-amount {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.bike-price-purchase .price-per-month {
+  font-size: 14px;
+  color: #777;
+}
+
+#h1-sell {
+
+  font-size: 3rem;
+  font-weight: 600;
+}

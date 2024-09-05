@@ -4,8 +4,19 @@ class BikesController < ApplicationController
 
   def index
     @bikes = Bike.all
+    if params[:query].present?
+      sql_subquery = <<~SQL
+      model ILIKE :query
+      OR CAST(year AS TEXT) ILIKE :query
+      OR (CAST(kilometers as TEXT) || ' km') ILIKE :query
+      OR description ILIKE :query
+      OR category ILIKE :query
+      OR CAST(price AS TEXT) ILIKE :query
+      SQL
+      @bikes = @bikes.where(sql_subquery, query: "%#{params[:query]}%")
+    
+    end
   end
-
   def show
     @bike = Bike.find(params[:id])
     @purchase = Purchase.new

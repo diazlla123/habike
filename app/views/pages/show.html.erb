@@ -1,46 +1,12 @@
-<h1><%= current_user.email %></h1>
-<%= link_to "Go back", bikes_path %>
+<div data-controller="toggle">
 
-<h2>Posted Bikes</h2>
-<div class="container">
-  <% @bikes.each do |bike| %>
-      <%= link_to bike_path(bike) do %>
-      <div class="bike-card">
-        <% if bike.photo.attached? %>
-          <%= cl_image_tag bike.photo.key, class: "bike-image" %>
-        <% else %>
-          <%= image_tag "bike.jpg", class: "bike-image" %>
-        <% end %>
-        <div class="bike-details">
-          <h3><%= bike.model %></h3>
-          <p><%= bike.year %> &middot; <%= bike.kilometers %> km &middot; <%= bike.category %></p>
-          <div class="bike-price">
-            <p class="price">Precio contado</p>
-            <p class="price-amount">$<%= bike.price %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+  <div class="sidebar" data-toggle-target="displayedBikes">
+    <button id="posted" class="active" data-action="click->toggle#display">Posted bikes</button>
+    <button id="purchased" data-action="click->toggle#display">Purchased bikes</button>
+  </div>
 
-<h2>Purchased Bikes</h2>
-<div class="container">
-  <% @bikes_purchased.each do |bike| %>
-      <%= link_to bike_path(bike) do %>
-      <div class="bike-card">
-        <% if bike.photo.attached? %>
-          <%= cl_image_tag bike.photo.key, class: "bike-image" %>
-        <% else %>
-          <%= image_tag "bike.jpg", class: "bike-image" %>
-        <% end %>
-        <div class="bike-details">
-          <h3><%= bike.model %></h3>
-          <p><%= bike.year %> &middot; <%= bike.kilometers %> km &middot; <%= bike.category %></p>
-          <div class="bike-price">
-            <p class="price">Precio contado</p>
-            <p class="price-amount">$<%= bike.price %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+  <div class="cards p-1">
+    <%= render "posted", bikes: @bikes%>
+  </div>
+
+</div>
