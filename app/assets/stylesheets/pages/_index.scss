@@ -60,6 +60,10 @@ $button-fill-color: #AD2831;
   margin-right: 20px;
   padding: 0.5rem;
 }
+.form-input:focus {
+  border-color: $button-fill-color;
+  box-shadow: 0 0 0 0.25rem #800e1465;
+}
 
 .add-your-bike {
   padding: 5px 10px;
@@ -72,17 +76,13 @@ $button-fill-color: #AD2831;
   align-items: flex-end;
   gap: 1rem;
 }
-
 .h3-none {
   color: #888888;
 }
 .input-search-bar {
   width: 50rem;
-
-
 }
-#view-form input:focus,
-#view-form select:focus,
-#view-form textarea:focus {
-  border: 2px solid $button-fill-color;
+.form-search-container:focus {
+  border-color: $button-fill-color;
+  box-shadow: 0 0 0 0.25rem #800e1465;
 }

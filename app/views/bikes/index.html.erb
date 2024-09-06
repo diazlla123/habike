@@ -10,7 +10,7 @@
 
 <div class="search-bar">
   <div class="search-bar-in">
-    <%= form_with url: bikes_path, method: :get, class: "d-flex" do %>
+    <%= form_with url: bikes_path, method: :get, class: "d-flex form-search-container" do %>
       <%= text_field_tag :query,
             params[:query],
             class: "form-input",
