@@ -1,3 +1,9 @@
+$base-color: #250902;
+$secondary-color: #38040E;
+$border-color-primary: #800E13;
+$border-color-secondary: #640D14;
+$button-fill-color: #AD2831;
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -15,12 +21,6 @@
 @import "pages/singup";
 @import "components/linksSingLogin";
 @import "pages/showbike";
-
-$base-color: #250902;
-$secondary-color: #38040E;
-$border-color-primary: #800E13;
-$border-color-secondary: #640D14;
-$button-fill-color: #AD2831;
 
 @import "components/new_form";
 @import "components/purchase";

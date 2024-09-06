@@ -48,8 +48,11 @@ $button-fill-color: #AD2831;
 .section__div-show-img {
 }
 .photo-show-bike {
-  margin-left: 5rem;
-  width: 45rem;
+  box-shadow: 3px 3px 5px #ddd;
+  border-radius: 1rem;
+  margin-left: 5rem;;
+  width: 35rem;
+  margin-right: 5rem;
 }
 .details-text-user-post{
   margin-top: 2rem;
