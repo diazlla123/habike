@@ -1,12 +1,15 @@
 <div data-controller="toggle">
 
-  <div class="sidebar" data-toggle-target="displayedBikes">
-    <button id="posted" class="active" data-action="click->toggle#display">Posted bikes</button>
-    <button id="purchased" data-action="click->toggle#display">Purchased bikes</button>
+  <div class="sidebar">
+    <button id="posted" class="active" data-action="click->toggle#displayPosted" data-toggle-target="postedButton">Posted bikes</button>
+    <button id="purchased" data-action="click->toggle#displayPurchased" data-toggle-target="purchasedButton">Purchased bikes</button>
   </div>
 
-  <div class="cards p-1">
+  <div class="cards p-1" data-toggle-target="postedBikes">
     <%= render "posted", bikes: @bikes%>
   </div>
 
+  <div class="cards p-1 d-none" data-toggle-target="purchasedBikes">
+    <%= render "purchased", bikes_purchased: @bikes_purchased%>
+  </div>
 </div>

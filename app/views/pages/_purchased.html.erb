@@ -1,5 +1,5 @@
 <div class="container">
-  <% @bikes_purchased.each do |bike| %>
+  <% bikes_purchased.each do |bike| %>
       <%= link_to bike_path(bike) do %>
       <div class="bike-card">
         <% if bike.photo.attached? %>
