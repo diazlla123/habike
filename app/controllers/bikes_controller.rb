@@ -14,7 +14,7 @@ class BikesController < ApplicationController
       OR CAST(price AS TEXT) ILIKE :query
       SQL
       @bikes = @bikes.where(sql_subquery, query: "%#{params[:query]}%")
-    
+
     end
   end
   def show
@@ -37,10 +37,20 @@ class BikesController < ApplicationController
     end
   end
 
+  def edit
+    @bike = Bike.find(params[:id])
+  end
+
   def update
     @bike = Bike.find(params[:id])
     @bike.update(bike_sold_params)
     redirect_to bikes_path
+  end
+
+  def destroy
+    @bike = Bike.find(params[:id])
+    @bike.destroy
+    redirect_to bikes_path, status: :see_other
   end
 
   private
@@ -49,6 +59,6 @@ class BikesController < ApplicationController
   end
 
   def bike_sold_params
-    params.require(:bike).permit(:status)
+    params.require(:bike).permit(:model, :year, :description, :kilometers, :price, :category, :photo, :status)
   end
 end
