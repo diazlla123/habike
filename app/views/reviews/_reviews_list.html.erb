@@ -1,0 +1,40 @@
+<div class="row w-100 d-flex justify-content-center">
+  <div class="col-md-8 col-12">
+    <div class="card shadow-0 border" style="background-color: #f0f2f5;">
+      <div class="card-body p-4 ">
+
+        <% if reviews.any? %>
+          <% reviews.each do |review| %>
+            <div class="card mb-4">
+              <div class="card-body">
+
+                <p> <%= review.comment %></p>
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-row align-items-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar" width="25" height="25" />
+                    <p class="small mb-0 ms-2"><%= review.buyer.email %></p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center">
+                    <% review.rating.times do %>
+                      <i class="fas fa-star text-warning mx-1"></i> <!-- Estrella llena -->
+                    <% end %>
+
+                    <% (5 - review.rating).times do %>
+                      <i class="far fa-star text-muted mx-1"></i> <!-- Estrella vacía -->
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <p>No reviews available for this bike yet.</p>
+        <% end %>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

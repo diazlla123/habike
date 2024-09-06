@@ -1,0 +1,6 @@
+class Review < ApplicationRecord
+  belongs_to :buyer, class_name: "User"
+  belongs_to :seller, class_name: "User"
+  belongs_to :bike
+  validates :rating, :comment, :buyer, :seller, presence: true
+end
