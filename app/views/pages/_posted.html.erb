@@ -1,6 +1,6 @@
 <div class="container">
   <% bikes.each do |bike| %>
-      <%= link_to bike_path(bike) do %>
+      <%= link_to bike_path(bike), :class => "text-decoration-none" do %>
       <div class="bike-card">
         <% if bike.photo.attached? %>
           <%= cl_image_tag bike.photo.key, class: "bike-image" %>
