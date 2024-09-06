@@ -6,23 +6,24 @@
   background-color: #ebe4e4;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 
 .sidebar button {
-  border-radius: 5px;
-  padding: 0.1rem;
-  border: solid 3px $button-fill-color;
-  text-decoration: none;
+  height: 60px;
+  width: 150px;
+  border-radius: 30px;
+  border-width: 0px;
   color: $button-fill-color;
-  background-color: white;
+  background-color: #ebe4e4;
   transition: 300ms ease all;
   margin-right: 1rem;
 
   &:hover {
     transform: scale(1.1);
   }
-  &:active {
+  &.active {
     transform: scale(1.0);
     color: white;
     background-color:$button-fill-color;
