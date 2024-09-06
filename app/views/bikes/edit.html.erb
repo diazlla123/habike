@@ -5,24 +5,24 @@
       <div class="row">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <%= f.input :model, label: @bike.model, placeholder: "Include brand and model", input_html: { class: 'form-control' } %>
+            <%= f.input :model, label: "Bike Model", placeholder: @bike.model, input_html: { class: 'form-control' } %>
             <div class="row">
               <div class="col-6">
-                <%= f.input :year, label: @bike.year, input_html: { class: 'form-control' } %>
+                <%= f.input :year, label: "Year", placeholder: @bike.year, input_html: { class: 'form-control' } %>
               </div>
               <div class="col-6">
-                <%= f.input :kilometers, label: @bike.kilometers, input_html: { class: 'form-control' } %>
+                <%= f.input :kilometers, label: "Kilometers", placeholder: @bike.kilometers, input_html: { class: 'form-control' } %>
               </div>
             </div>
-            <%= f.input :price, label: @bike.price, placeholder: "In dolars", input_html: { class: 'form-control' } %>
-            <%= f.input :category, label: @bike.category, placeholder: "select or create your own category", collection: ["Naked", "Street", "Hybrid", "Electric", "Other"], prompt: "Select or create your own category", input_html: { class: 'form-control' } %>
+            <%= f.input :price, label: "Price", placeholder: @bike.price, input_html: { class: 'form-control' } %>
+            <%= f.input :category, label: "Category", placeholder: @bike.category, collection: ["Naked", "Street", "Hybrid", "Electric", "Other"], prompt: "Select or create your own category", input_html: { class: 'form-control' } %>
 
             <div>
               <input type="text" class="d-none">
             </div>
           </div>
           <div class="col-lg-6 col-md-12 form-control-photo">
-            <%= f.input :description, label: @bike.description, input_html: { class: 'form-control', rows: 8 } %>
+            <%= f.input :description, label: "Description", placeholder: @bike.description, input_html: { class: 'form-control', rows: 8 } %>
             <%= f.input :photo, as: :file, label: "Photo", input_html: { class: 'form-control-file' } %>
           </div>
 
