@@ -33,19 +33,20 @@
 </section>
 <div class="links-show-bike">
   <%= link_to "Back", bikes_path, :class => "backLink-show" %>
-  <div>
+  <div class="links-show-bike-1">
     <% if user_signed_in? && current_user.id == @bike.user_id %>
-      <%= link_to "Remove offer",
-      bike_path(@bike.id),
-      data: {turbo_method: :delete,
-      turbo_confirm: "Are you sure?"} %>
-      <%= link_to "Edit offer", edit_bike_path(@bike.id) %>
-    <% else %>
-      <%= simple_form_for [@bike, @purchase] do |f| %>
-        <%= f.hidden_field :seller_id, value: @bike.user_id %>
-        <%= f.hidden_field :bike_id, value: @bike.id %>
-        <%= f.submit "Buy", class: "btn-show-bike-buy" %>
-      <% end %>
+    <%= link_to "Remove offer",
+    bike_path(@bike.id),
+    data: {turbo_method: :delete,
+    turbo_confirm: "Are you sure?"},
+    :class => "btn-show-bike-buy-1 margin-bottom-1" %>
+    <%= link_to "Edit offer", edit_bike_path(@bike.id), :class => "btn-show-bike-buy-1" %>
+  <% else %>
+    <%= simple_form_for [@bike, @purchase] do |f| %>
+      <%= f.hidden_field :seller_id, value: @bike.user_id %>
+      <%= f.hidden_field :bike_id, value: @bike.id %>
+      <%= f.submit "Buy", class: "btn-show-bike-buy" %>
     <% end %>
+  <% end %>
   </div>
 </div>
