@@ -8,7 +8,7 @@
       </div>
 
       <% if bike.photo.attached? %>
-        <%# <%= cl_image_tag bike.photo.key, class: "bike-image" %>
+        <%= cl_image_tag bike.photo.key, class: "bike-image" %>
       <% else %>
         <%= image_tag "bike.jpg", class: "bike-image" %>
       <% end %>
