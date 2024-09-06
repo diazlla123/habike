@@ -19,7 +19,9 @@
         </p>
       </div>
       <div class="details-text-user-post">
-        <p class="details-text-user-post-p"><small>Posted by User ID: <%= @bike.user.email %></small></p>
+        <%= link_to  bike_reviews_path(@bike) do %>
+          <p class="details-text-user-post-p"><small>Posted by User ID: <%= @bike.user.email %></small></p>
+        <% end %>
       </div>
     </div>
   </div>
