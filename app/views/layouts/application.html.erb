@@ -17,4 +17,9 @@
     <p class="alert"><%= alert %></p>
     <%= render "shared/flashes" %>
   </body>
+
+  <footer>
+    <%= render "shared/footer" %>
+    <%= yield :footer %>
+  </footer>
 </html>

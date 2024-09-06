@@ -1,0 +1,17 @@
+<h2>Habike</h2>
+<ul>
+  <li><%= link_to 'Bikes', bikes_path %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to 'Profile',  page_path(current_user.id) %></li>
+  <% else %>
+    <li><%= link_to "Login", new_user_session_path %></li>
+  <% end %>
+  <li><%= link_to 'Sell your Bike', new_bike_path(@bike) %></li>
+</ul>
+<div class="social-icons">
+      <%= link_to 'https://www.instagram.com/motogp/', class: "fa fa-instagram", target: "_blank" do %>
+      <% end %>
+      <%= link_to 'https://x.com/motogp', class: "fa fa-twitter", target: "_blank" do %>
+      <% end %>
+  </div>
+<p>&copy; Habike. All Rights Reserved.</p>
