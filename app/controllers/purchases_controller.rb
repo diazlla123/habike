@@ -20,7 +20,6 @@ class PurchasesController < ApplicationController
     @bike = @purchase.bike  # to instance bike selling
     @seller = @bike.user # to instance seller
     @buyer = User.find(@purchase.buyer_id)
-
   end
 
   private
